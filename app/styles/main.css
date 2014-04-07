@@ -11,6 +11,11 @@ body {
     padding-bottom: 20px;
 }
 
+.navSelect
+{
+    margin-top: 10px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
