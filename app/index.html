@@ -28,31 +28,29 @@
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><select id="countrySelect" class="navSelect"><option>Merica</option><option>Canadia</option><select></li>
+                    <li class="active"><a id="btnHome" href="#">Home</a></li>
+                    <li><a id="btnAbout" href="#">About</a></li>
+                    <li><a id="btnContact" href="#">Contact</a></li>
+                    <li><select id="countrySelect" class="navSelect"><option value="en-US">Merica</option><option value="en-CA">Canadia</option><select></li>
                 </ul>
                 <h3 class="text-muted">globalize</h3>
             </div>
 
             <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+                <h1 id="welcomeHeader">'Allo, 'Allo!</h1>
+                <p id="welcomeMessage" class="lead">Always a pleasure scaffolding your apps.</p>
+                <p><a id="btnSuccess" class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
             </div>
 
             <div class="row marketing">
                 <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+                    <h4>Globalization</h4>
+                    <p>Globalization is the process of designing and developing applications that function for multiple cultures.</p>
+                    <h4>Localization</h4>
 
+<p>Localization is the process of customizing your application for a given culture and locale.</p>
 
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-
+<a href="http://stackoverflow.com/questions/2074869/globalization-vs-localization">Source</a>
                 </div>
             </div>
 
@@ -67,6 +65,10 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/cldr.js/dist/cldr.js"></script>
+        <script src="bower_components/globalize/lib/globalize.js"></script>
+        <script src="bower_components/globalize/lib/cultures/globalize.culture.en-US.js"></script>
+        <script src="bower_components/globalize/lib/cultures/globalize.culture.en-CA.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -95,7 +97,7 @@
         <script src="bower_components/bootstrap/js/tab.js"></script>
         <!-- endbuild -->
 
-        <script src="bower_components/requirejs/require.js></script>
+        <script src="bower_components/requirejs/require.js"></script>
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
