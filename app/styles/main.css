@@ -59,6 +59,11 @@ body {
     padding: 14px 24px;
 }
 
+.currentTime {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
 /* Supporting marketing content */
 .marketing {
     margin: 40px 0;

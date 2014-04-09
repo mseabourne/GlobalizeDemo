@@ -28,20 +28,21 @@
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a id="btnHome" href="#">Home</a></li>
-                    <li><a id="btnAbout" href="#">About</a></li>
-                    <li><a id="btnContact" href="#">Contact</a></li>
-                    <li><select id="countrySelect" class="navSelect"><option value="en-US">Merica</option><option value="en-CA">Canadia</option><select></li>
+                    <li class="active"><a id="btnHome" href="#" data-localize="buttonHome">Home</a></li>
+                    <li><a id="btnAbout" href="#" data-localize="buttonAbout">About</a></li>
+                    <li><a id="btnContact" href="#" data-localize="buttonContact">Contact</a></li>
+                    <li><select id="countrySelect" class="navSelect"><option value="en-US">Merica</option><option value="en-CA">Canadia</option><option value="fr-FR">France</option><select></li>
                 </ul>
                 <h3 class="text-muted">globalize</h3>
             </div>
 
             <div class="jumbotron">
-                <h1 id="welcomeHeader">'Allo, 'Allo!</h1>
-                <p id="welcomeMessage" class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a id="btnSuccess" class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+                <h1 id="welcomeHeader" data-localize="welcomeHeader">'Allo, 'Allo!</h1>
+                <p id="welcomeMessage" class="lead" data-localize="welcomeMessage">Always a pleasure scaffolding your apps.</p>
+                <p>                <p class="currentTime">Current Time: <span id="currentTime"></span></p>
+                <a id="btnSuccess" class="btn btn-lg btn-success" href="#" data-localize="btnSuccess">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
             </div>
-
+            
             <div class="row marketing">
                 <div class="col-lg-6">
                     <h4>Globalization</h4>
@@ -67,8 +68,8 @@
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/cldr.js/dist/cldr.js"></script>
         <script src="bower_components/globalize/lib/globalize.js"></script>
-        <script src="bower_components/globalize/lib/cultures/globalize.culture.en-US.js"></script>
         <script src="bower_components/globalize/lib/cultures/globalize.culture.en-CA.js"></script>
+        <script src="bower_components/globalize/lib/cultures/globalize.culture.fr-FR.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
