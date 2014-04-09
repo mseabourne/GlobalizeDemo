@@ -3,6 +3,7 @@
 
 "use strict";
 
+// Setup language for USA
 Globalize.addCultureInfo( 'en-US', {
     messages: {
         buttonHome: 'Home',
@@ -15,6 +16,7 @@ Globalize.addCultureInfo( 'en-US', {
     }
 });
 
+// Setup language for Canada
 Globalize.addCultureInfo( 'en-CA', {
     messages: {
         buttonHome: 'Home, eh!',
@@ -27,6 +29,7 @@ Globalize.addCultureInfo( 'en-CA', {
     }
 });
 
+// Setup language for France
 Globalize.addCultureInfo( 'fr-FR', {
     messages: {
         buttonHome: 'Maison',
@@ -41,15 +44,18 @@ Globalize.addCultureInfo( 'fr-FR', {
 
 
 var myGlobalizeDemo = myGlobalizeDemo || {};
+
 myGlobalizeDemo.switchCountry = function(lang){
+
+    // set the current culture in the Globalize library
+    Globalize.culture(lang);
     
     // Update individual elements
-    // $("#btnHome").text(Globalize.localize( 'buttonHome', lang ));
-    // $("#btnAbout").text(Globalize.localize( 'buttonAbout', lang ));
-    // $("#btnContact").text(Globalize.localize( 'buttonContact', lang ));
-    // $("#welcomeHeader").text(Globalize.localize( 'welcomeHeader', lang ));
-    // $("#welcomeMessage").text(Globalize.localize( 'welcomeMessage', lang ));
-    Globalize.culture(lang);
+    // $("#btnHome").text(Globalize.localize( 'buttonHome' ));
+    // $("#btnAbout").text(Globalize.localize( 'buttonAbout' ));
+    // $("#btnContact").text(Globalize.localize( 'buttonContact' ));
+    // $("#welcomeHeader").text(Globalize.localize( 'welcomeHeader' ));
+    // $("#welcomeMessage").text(Globalize.localize( 'welcomeMessage' ));
     
     // Update all based on data attributes    
     $('[data-localize]').each(function(index) {
@@ -62,10 +68,12 @@ myGlobalizeDemo.switchCountry = function(lang){
 
 
 $( document ).ready(function() {
-
+  // when a country is selected switch the content using the culture stored in the option value
   $('#countrySelect').change(function() {
     myGlobalizeDemo.switchCountry($(this).val());
   }).trigger('change');
+  
+  // when our success button is clicked open a new page based on the current culture
   $('#btnSuccess').click(function() {
     window.open(Globalize.localize('btnSuccessDestination'));
   });
